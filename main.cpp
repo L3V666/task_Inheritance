@@ -9,6 +9,7 @@ protected:
     int health;
     int speed;
     string world;
+    bool peaceful;
 
 public:
     Mob();
@@ -30,7 +31,3 @@ public:
     int getRange();
     bool getNeutral();
 };
-
-class Peaceful : public Mob {
-    
-} 
