@@ -10,11 +10,10 @@ protected:
     bool peaceful;
 
 public:
-    Mob();
-
     int getHealth();
-    int getSpeed();
+    double getSpeed();
     std::string getWorld();
+    bool getPeaceful();
 };
 
 class Hostile : public Mob
@@ -197,3 +196,38 @@ public:
         this->neutral = neutral;
     }
 };
+
+int Mob::getHealth()
+{
+    return health;
+}
+
+double Mob::getSpeed()
+{
+    return speed;
+}
+
+std::string Mob::getWorld()
+{
+    return world;
+}
+
+bool Mob::getPeaceful()
+{
+    return peaceful;
+}
+
+int Hostile::getDamage()
+{
+    return damage;
+}
+
+int Hostile::getRange()
+{
+    return damage;
+}
+
+bool Hostile::getNeutral()
+{
+    return neutral;
+}
