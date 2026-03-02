@@ -11,8 +11,10 @@ protected:
     bool peaceful;
 
 public:
+    virtual ~Mob();
     int getHealth();
     double getSpeed();
     std::string getWorld();
     bool getPeaceful();
+    virtual int getDamage();
 };

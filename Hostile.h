@@ -10,7 +10,7 @@ protected:
     bool neutral;
 
 public:
-    int getDamage();
+    int getDamage() override;
     int getRange();
     bool getNeutral();
 };

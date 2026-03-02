@@ -20,3 +20,10 @@ bool Mob::getPeaceful()
 {
     return peaceful;
 }
+
+int Mob::getDamage()
+{
+    return 0;
+}
+
+Mob::~Mob() {}

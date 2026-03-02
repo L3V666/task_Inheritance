@@ -7,7 +7,7 @@ Fighter::Fighter(Mob *mob, Armor *armor, Weapon *weapon)
     this->speed = mob->getSpeed();
     this->world = mob->getWorld();
     this->peaceful = mob->getPeaceful();
-
+    this->damage = mob->getDamage();
     this->originalHealth = health;
 
     if (armor != nullptr)
@@ -17,7 +17,7 @@ Fighter::Fighter(Mob *mob, Armor *armor, Weapon *weapon)
 
     if (weapon != nullptr && isHostile)
     {
-        this->damage = weapon->getGain(); // Исправлено: было getDamage()
+        this->damage += weapon->getGain(); // Исправлено: было getDamage()
         this->range += weapon->getDistance();
     }
 }
